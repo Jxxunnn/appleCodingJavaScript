@@ -7,37 +7,36 @@
     <title>Document</title>
   </head>
   <body>
-    <button>ㅁㄴㅇㅁㄴㅇ</button>
-    <textarea></textarea>
-    <h1>ㄴㅇㄴㅇ</h1>
+    <div style="display: none">모달창0</div>
+    <div style="display: none">모달창1</div>
+    <div style="display: none">모달창2</div>
+
+    <button>버튼0</button>
+    <button>버튼1</button>
+    <button>버튼2</button>
+
     <script>
-      const 사람 = {
-        name: "name",
-        sayHi: function () {
-          console.log(`안녕 나는 ${this.name}`);
-        },
-      };
+      // const 변수 = "손흥민";
 
-      사람.sayHi("이준근");
+      // function 해체분석기(문자들, 변수들) {
+      //   console.log(문자들);
+      //   console.log(변수들);
+      // }
 
-      const 자료 = {
-        data: [1, 2, 3, 4, 5],
-      };
+      // 해체분석기`안녕하세요 ${변수} 입니다`;
 
-      자료.전부더하기 = function () {
-        let result = 0;
-        this.data.forEach(function (element) {
-          result += element;
-        });
-        return result;
-      };
+      const pants = 0;
+      const socks = 100;
+      `바지${pants} 양말${socks}`;
 
-      const button = document.querySelector("button");
-      button.addEventListener("click", function () {
-        setTimeout(() => {
-          console.log(this.innerHTML);
-        }, 1000);
-      });
+      function 해체분석기(문자들, 변수1, 변수2) {
+        if (변수1 == 0) {
+          console.log(`${문자들[0]}안팔아요 ${문자들[1]}${변수2}`);
+        } else {
+          console.log(`${문자들[1]}${변수1} ${문자들[0]}${변수2}`);
+        }
+      }
+      해체분석기`바지${pants} 양말${socks}`;
     </script>
   </body>
 </html>
