@@ -6,5 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <button>ㅁㄴㅇㅁㄴㅇ</button>
+    <textarea></textarea>
+    <h1>ㄴㅇㄴㅇ</h1>
+    <script>
+      const 사람 = {
+        name: "name",
+        sayHi: function () {
+          console.log(`안녕 나는 ${this.name}`);
+        },
+      };
+
+      사람.sayHi("이준근");
+
+      const 자료 = {
+        data: [1, 2, 3, 4, 5],
+      };
+
+      자료.전부더하기 = function () {
+        let result = 0;
+        this.data.forEach(function (element) {
+          result += element;
+        });
+        return result;
+      };
+
+      const button = document.querySelector("button");
+      button.addEventListener("click", function () {
+        setTimeout(() => {
+          console.log(this.innerHTML);
+        }, 1000);
+      });
+    </script>
+  </body>
 </html>
