@@ -16,12 +16,22 @@
     <button>버튼2</button>
 
     <script>
-      function 함수(a, b, c) {
-        arguments.forEach((element) => {
-          console.log(element);
+      // 8. 데이터마이닝 기능 만들기 '알파벳 출현 갯수 세어주는 함수'
+
+      function 글자세기(글자) {
+        const 결과 = {};
+        [...글자].forEach(function (a) {
+          // 만약 결과에 element가 있으면 +1 해주고
+          // 없으면 element : 1 집어넣기
+          if (결과[a] > 0) {
+            결과[a] = 결과[a] + 1;
+          } else {
+            결과[a] = 1;
+          }
         });
+        console.log(결과);
       }
-      함수(1, 2, 3);
+      글자세기("asdfas");
     </script>
   </body>
 </html>
