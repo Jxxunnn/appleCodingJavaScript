@@ -16,69 +16,19 @@
     <button>버튼2</button>
 
     <script>
-
-
-      class 강아지 {
-        constructor(type, color) {
-          this.type = type;
-          this.color = color;
-        }
-        한살먹기() {
-          if(this instanceof Cat){
-            this.age++;
-          }
-
-        }
-      }
-      const 강아지1 = new 강아지("말티즈", "white");
-
-      class 고양이 extends 강아지 {
-        constructor(type, color, age) {
-          super(type, color);
-          this.age = age;
-        }
-
-      }
-      const 고양이1 = new 고양이("코숏", "white", 5);
-
-      get/set을 이용해봅시다.
-
-      class Unit {
-        constructor(power = 5, vital = 100) {
-          this.power = power;
-          this.vital = vital;
-        }
-        get battlePoint() {
-          return this.power + this.vital;
-        }
-        set heal(value) {
-          this.vital += value;
-        }
-      }
-
-      const unit1 = new Unit();
-      console.log(unit1.battlePoint);
-      unit1.heal = 50;
-      console.log(unit1.vital);
-
-      5. get/set을 이용해봅시다 2
-
-      const data = {
-        odd: [],
-        even: [],
-
-        set alignNum(num) {
-          if (num % 2 == 0) {
-            this.even.push(num);
-          }
-          if (num % 2 == 1) {
-            this.odd.push(num);
-          }
+      let 신체정보 = {
+        body: {
+          height: 190,
+          weight: 70,
         },
-        get printNum() {
-          return [...this.even, ...this.odd].sort((a, b) => a - b);
-        },
+        size: ["상의 Large", "바지 30인치"],
       };
+
+      let {
+        body: { height, weight },
+        size: [상의, 하의],
+      } = 신체정보;
+      console.log(신체정보);
     </script>
   </body>
 </html>
