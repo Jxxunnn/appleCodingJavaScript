@@ -7,28 +7,34 @@
     <title>Document</title>
   </head>
   <body>
-    <div style="display: none">모달창0</div>
-    <div style="display: none">모달창1</div>
-    <div style="display: none">모달창2</div>
-
-    <button>버튼0</button>
-    <button>버튼1</button>
-    <button>버튼2</button>
-
+    <img id="test" src="https://codingapple1.github.io/kona.jpg" />
     <script>
-      let 신체정보 = {
-        body: {
-          height: 190,
-          weight: 70,
-        },
-        size: ["상의 Large", "바지 30인치"],
-      };
+      // Promise를 자동으로 뱉어주는 async 키워드
+      // async function 더하기() {
+      //   const 프로미스 = new Promise(function (resolve, reject) {
+      //     resolve();
+      //     reject();
+      //   });
+      //   프로미스.then(function () {
+      //     console.log("성공했아요");
+      //   });
 
-      let {
-        body: { height, weight },
-        size: [상의, 하의],
-      } = 신체정보;
-      console.log(신체정보);
+      //   const 결과 = await 프로미스;
+      //   console.log(결과);
+      // }
+
+      // 더하기();
+
+      async function 연산() {
+        const 더하기 = new Promise((성공, 실패) => {
+          const 결과 = 5 + 5;
+          성공(결과);
+        });
+        더하기.then(function () {
+          console.log("jjj");
+        });
+      }
+      연산();
     </script>
   </body>
 </html>
