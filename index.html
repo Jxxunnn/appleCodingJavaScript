@@ -7,34 +7,15 @@
     <title>Document</title>
   </head>
   <body>
-    <img id="test" src="https://codingapple1.github.io/kona.jpg" />
+    <button>나는 버튼이야</button>
     <script>
-      // Promise를 자동으로 뱉어주는 async 키워드
-      // async function 더하기() {
-      //   const 프로미스 = new Promise(function (resolve, reject) {
-      //     resolve();
-      //     reject();
-      //   });
-      //   프로미스.then(function () {
-      //     console.log("성공했아요");
-      //   });
-
-      //   const 결과 = await 프로미스;
-      //   console.log(결과);
-      // }
-
-      // 더하기();
-
-      async function 연산() {
-        const 더하기 = new Promise((성공, 실패) => {
-          const 결과 = 5 + 5;
-          성공(결과);
-        });
-        더하기.then(function () {
-          console.log("jjj");
-        });
+      const 오브젝트 = { name: "kim", age: 30 };
+      for (let i = 0; i < 3; i++) {}
+      [1, 2, 3].forEach(function () {});
+      for (let key in 오브젝트) {
       }
-      연산();
+      for (let key of 오브젝트) {
+      }
     </script>
   </body>
 </html>
