@@ -9,13 +9,21 @@
   <body>
     <button>나는 버튼이야</button>
     <script>
-      const 오브젝트 = { name: "kim", age: 30 };
-      for (let i = 0; i < 3; i++) {}
-      [1, 2, 3].forEach(function () {});
-      for (let key in 오브젝트) {
+      const weight = Symbol("내 시크릿 몸무게임");
+      const height = Symbol("내 시크릿 몸무게임");
+      const person = { name: "kim", age: 30 };
+      person.weight = 100;
+      console.log(person);
+      person[weight] = 100;
+      person[height] = 160;
+
+      for (let key in person) {
+        person[key] *= 2;
       }
-      for (let key of 오브젝트) {
-      }
+      console.log(person);
+
+      const 출석부 = new Set(["ho", "asd", "qwed", "zxc"]);
+      console.log([...출석부]);
     </script>
   </body>
 </html>
