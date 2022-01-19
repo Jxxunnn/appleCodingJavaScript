@@ -4,26 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Google Game Clone Coding</title>
   </head>
   <body>
-    <button>나는 버튼이야</button>
-    <script>
-      const weight = Symbol("내 시크릿 몸무게임");
-      const height = Symbol("내 시크릿 몸무게임");
-      const person = { name: "kim", age: 30 };
-      person.weight = 100;
-      console.log(person);
-      person[weight] = 100;
-      person[height] = 160;
-
-      for (let key in person) {
-        person[key] *= 2;
-      }
-      console.log(person);
-
-      const 출석부 = new Set(["ho", "asd", "qwed", "zxc"]);
-      console.log([...출석부]);
-    </script>
+    <canvas class="canvas"></canvas>
+    <script src="main.js" defer></script>
   </body>
 </html>
